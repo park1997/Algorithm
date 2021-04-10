@@ -5,23 +5,17 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-       String[] nums = {"a","b","c","d"};
+        Scanner sc=new Scanner(System.in);
 
-        for (int i = 0; i < nums.length; i++) {
-            System.out.println(nums[i]);
+
+        while(true){
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            if (a == 0 && b == 0) {
+                break;
+            }
+            System.out.println(a+b);
         }
-
-        System.out.println();
-
-        int cnt = 0;
-        for(String i:nums){
-            cnt += 1;
-            System.out.println(cnt+" "+i);
-        }
-
-
-
-
     }
 
 }
