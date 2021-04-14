@@ -13,12 +13,11 @@ public class Main2 {
         System.out.print("메뉴선택 >  ");
 
 
-        int a = 0;
-        int b = 0;
+        int a = 0; //total cost
+        int b = 0; // 넣을 돈
 
 
         while(true) {
-
             int n = sc.nextInt();
             switch(n) {
                 case 0:
@@ -37,14 +36,14 @@ public class Main2 {
                 case 2:
                     System.out.print("입금 (원) > ");
                     b=sc.nextInt();
-                    a+=b;
+                    a += b;
                     System.out.println();
                     System.out.print("메뉴 선택 > ");
                     break;
                 case 3:
                     System.out.print("출금(원) > ");
                     b=sc.nextInt();
-                    a=a-b;
+                    a -= b;
                     System.out.println();
                     System.out.print("메뉴 선택 > ");
                     break;

@@ -27,33 +27,31 @@ public class Main3 {
         int index2= sc.nextInt();
 
         int temp;
-        temp=arr[index1]; //10
-        arr[index1]=arr[index2]; // 8 4 9 3 8 5
+        temp=arr[index1]; // [ 10 4 9 3 8 5 ]
+        arr[index1]=arr[index2]; // [8 4 9 3 8 5]
         arr[index2]=temp;  // 8 4 9 3 10 5
 
+        // [ 10 4 9 3 8 5 ]
         // [ 8 4 9 3 10 5 ]
         // [ 10 10 10 10 10 10 ]
-
 
         for(int i=0; i<num;i++) {
             System.out.print(arr[i]+" ");
         }
-
 
         System.out.println();
         System.out.println("3.3");
         System.out.print("검색할 값 입력> ");
 
 //         [ 8 4 10 3 10 5 ]
+//        8 4 9 3 10 5
         int number = sc.nextInt();
-        int result=0;
         for(int i=0; i<num;i++) {
             if(number == arr[i]) {
-                result = i;
+                System.out.println(number +"(이) 처음 나오는 index번호는  "+i);
                 break;
             }
         }
-        System.out.println(number +"(이) 처음 나오는 index번호는  "+result);
         sc.close();
     }
 }
