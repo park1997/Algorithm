@@ -1,5 +1,5 @@
 package MyLab5;
-
+// 내가만든 소수구하는 알고리즘
 import java.util.ArrayList;
 import java.util.Scanner;
 
