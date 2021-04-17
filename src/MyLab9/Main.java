@@ -1,6 +1,4 @@
 package MyLab9;
-
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -12,22 +10,22 @@ public class Main {
         for(String unit : arr) {
             if (unit.equals("+") || unit.equals("-") || unit.equals("*") || unit.equals("/")) {
                 if (unit.equals("+")) {
-                    result = stack[head - 1] + stack[head - 2];
+                    result = stack[head - 2] + stack[head - 1];
                     head -= 1;
                     stack[head] = 0.0;
                     stack[head-1] = result;
                 } else if (unit.equals("-")) {
-                    result = stack[head - 1] - stack[head - 2];
+                    result = stack[head - 2] - stack[head - 1];
                     head -= 1;
                     stack[head] = 0.0;
                     stack[head-1] = result;
                 } else if (unit.equals("*")) {
-                    result = stack[head - 1] * stack[head - 2];
+                    result = stack[head - 2] * stack[head - 1];
                     head -= 1;
                     stack[head] = 0.0;
                     stack[head-1] = result;
                 } else if (unit.equals("/")) {
-                    result = stack[head - 1] / stack[head - 2];
+                    result = stack[head - 2] / stack[head - 1];
                     head -= 1;
                     stack[head] = 0.0;
                     stack[head-1] = result;
@@ -47,8 +45,6 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String expr = sc.next();
         System.out.println(expr + "="+postCalc(expr));
-
-
 
 
     }

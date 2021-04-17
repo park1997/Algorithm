@@ -10,11 +10,12 @@ public class Main_answer {
         for (int i = 0;i<expr.length();i++) {
             char c = expr.charAt(i);
             if (c >= '0' && c <= '9') {
-                stack[++top] = c - '0';
+                top += 1;
+                stack[top] = c - '0';
             }else{
                 int b = stack[top--];
                 int a = stack[top--];
-                int r=-1;
+                int r = -1;
                 if (c == '+') {
                     r= a + b;
                 } else if (c == '-') {
