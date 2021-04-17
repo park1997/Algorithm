@@ -3,9 +3,10 @@ package MyLab8;
 import java.util.Scanner;
 
 // 괄호쌍 검사하기
+// 교수님 풀이
 public class Main3 {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         String str = sc.next();
         char[] stack = new char[str.length()];
         int top = -1;
@@ -16,6 +17,7 @@ public class Main3 {
                 stack[top]=c;
             }else if (top == -1) {
                 top = 0;
+                System.out.println("123");
                 break;
             }else{
                 char v = stack[top];

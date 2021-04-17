@@ -1,7 +1,8 @@
 package MyLab8;
 
 import java.util.Scanner;
-// charAT
+// charAT 사용법
+
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

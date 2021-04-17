@@ -3,7 +3,7 @@ package MyLab7;
 import java.util.Scanner;
 
 // 이번엔 단일 연결리스트로 스택을 만들거임!
-class Node {
+class Node{
     int data;
     Node next;
     public Node(int e) {
@@ -14,7 +14,6 @@ class Node {
 
 class Stack {
     Node head;
-
     public Stack() {
         head = null;
     }
@@ -33,7 +32,6 @@ class Stack {
         return head == null;
     }
 }
-
 
 
 public class Main {
