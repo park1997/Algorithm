@@ -49,7 +49,7 @@ public class RealMain {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         long timeStamp = System.currentTimeMillis();
-        int pcnt = pi(n);
+        int pcnt = pi2(n);
         long elapaseTime = System.currentTimeMillis() - timeStamp;
         System.out.println("pi("+n+")="+pcnt);
         System.out.println("Elapsed time is "+elapaseTime+"ms");

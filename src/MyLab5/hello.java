@@ -17,7 +17,7 @@ public class hello {
         b.set(0, 0);
         b.set(1,0);
 
-        for (int i = 2; i<sqrt(a); i++){
+        for (int i = 2; i<=sqrt(a); i++){
             int cnt =1;
             while(true){
                 cnt+=1;
