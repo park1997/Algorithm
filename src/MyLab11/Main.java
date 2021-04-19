@@ -1,6 +1,8 @@
 package MyLab11;
 
 import java.util.Scanner;
+// 이중연결리스트로 작성하기
+// 교수님 풀이
 
 class Node{
     public int data;

@@ -12,8 +12,7 @@ class Stack {
     }
     void push(int e) {
         // Increase top by 1
-        top += 1;
-        stack[top] = e;
+        stack[++top] = e;
     }
     int top() {
         return stack[top];
