@@ -32,7 +32,7 @@ public class RealMain {
         int pi=0;
         for (int i = 2; i <= n; i++) {
             boolean isPrime = true;
-            for (int j = 2; j*j < i; j++) { // 제곱근까지만 돌리자!
+            for (int j = 2; j*j <= i; j++) { // 제곱근까지만 돌리자!
                 if (i % j == 0) {
                     isPrime = false;
                     break;
