@@ -20,16 +20,7 @@ public class ex02 {
 
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
-        char[] stack = new char[100];
-        int top = -1;
-        for (int i = 0; i < str.length(); i++) {
-            stack[++top] = str.charAt(i); //push하는거
-        }
-        while (top > -1) {
-            System.out.println(stack[top--]);
-        }
+        
 
     }
 }
