@@ -13,6 +13,9 @@ public class Main {
         int size = n + 1;
         int[] queue = new int[size];
         int head = 0, tail = 0;
+        for (int i = 1; i <= n; i++) {
+            queue[tail++] = i;
+        }
         while (head != tail) {
             for (int i = 1; i < k; i++) {
                 queue[tail] = queue[head];
