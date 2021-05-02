@@ -20,5 +20,13 @@ public class Main {
         myCar2.stop();
         myCar2.info();
 
+        Bicycle myBy1 = new Bicycle();
+        myBy1.color = "red";
+        myBy1.price = 1000;
+
+        Bicycle myBy2 = new Bicycle("blue", 1500);
+
+
+
     }
 }

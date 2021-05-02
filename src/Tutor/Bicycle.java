@@ -7,6 +7,12 @@ public class Bicycle {
     public Bicycle() {
         System.out.println(" Bicycle constructor");
     }
+    public Bicycle(String c, int p) {
+        this.color = c;
+        this.price = p;
+        System.out.println("Bicycle constructor 2");
+    }
+
     public void run() {
         System.out.println("-- run --");
     }
