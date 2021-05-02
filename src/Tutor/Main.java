@@ -27,6 +27,7 @@ public class Main {
         Bicycle myBy2 = new Bicycle("blue", 1500);
 
 
-
+        System.out.println(" myCar 1 : "+myCar1);
+        System.out.println(" myCar 2 : "+myCar2);
     }
 }
