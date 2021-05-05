@@ -48,14 +48,5 @@ public class Main {
         myphone.off("byebyebyebyebye",12);
         myphone.on();
 
-
-
-
-
-
-
-
-
-
     }
 }
