@@ -1,21 +1,22 @@
 package Card;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Card mycard = new Card();
 
-        mycard.number = "1234 5678 9012";
-        mycard.password = 1234;
         mycard.name = "박병현";
-        mycard.money = 0;
-        mycard.overdate = "2025/01/01";
-        mycard.company = "농협";
+        mycard.pw = 1234;
+        mycard.money = 1000;
+        mycard.cardnum = "1234 5678 9012 3456";
 
-        mycard.deposit(3000);
-        mycard.pay(4000);
 
-        mycard.info();
-
+        System.out.println();
+        mycard.pay(500,"2020/5/5");
+        Scanner sc = new Scanner(System.in);
+        int PW = sc.nextInt();
+        mycard.info(PW);
 
     }
 }

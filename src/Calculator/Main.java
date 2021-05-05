@@ -1,14 +1,32 @@
 package Calculator;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
         Calculator calc = new Calculator();
-        calc.price = 5000;
+
+        calc.color = "black";
+        calc.price = 10000;
         calc.brand = "Casio";
-        calc.adding(3, 4);
-        calc.minus(5, 6);
-        calc.mul(6, 7);
-        calc.divide(5, 6);
-        calc.factorial(10);
+
+        int a1 = sc.nextInt();
+        int a2 = sc.nextInt();
+
+        calc.add(a1,a2);
+        calc.minus(a1,a2);
+        calc.mul(a1,a2);
+        calc.div(a1, a2);
+        calc.factorial(a1);
+
+        calc.info();
+
+
+
+
+
+
     }
 }
