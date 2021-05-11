@@ -1,36 +1,27 @@
 package MyLab14;
 
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
-
-/*
- 선택정렬 : 배열에서 아직 정렬되지 않은 부분의 원소들 중에서
- 최솟값을 선택하여 정렬된부분의 바로 오른쪽 원소와 교환하는 정렬 알고리즘
- O(N**2)
- */
-/*
-삽입정렬은 배열이 정렬된 부분과 정렬되지 않은 부분으로 나뉘며 정렬 안된 부분의
-가장 왼쪽원소를 정렬된 부분에 삽입하는 방식의 정렬 알고리즘
-O(N**2)
- */
-public class Main {
-
+// 교수님 풀이
+public class Main2 {
+    // O(N**2) 알고리즘임
     static void selection_sort(int[] v, int n) {
 
-        for (int i = 0; i < n; i++) {
-            int min = v[i];
-            int temp;
+        for (int i = 0; i < n-1; i++) {
+            int min = i;
             for (int j = i; j < n; j++) {
-                if (min > v[j]) {
-                    temp = min;
-                    min = v[j];
-                    v[j] = temp;
+                if (v[min] > v[j]) {
+                    min = j;
                 }
+                int temp = v[min];
+                v[min] = v[i];
+                v[i] = temp;
             }
+
 //            System.out.println(Arrays.toString(v));
         }
     }
+    // 삽입정렬은 정렬이 어느정도 되어있으면 상당히 빠르게 검사하는 특성이있음
     static void insertion_sort(int[] v, int n) {
         for (int i = 1; i < n; i++) {
             int t = v[i];
@@ -53,19 +44,21 @@ public class Main {
         int n = sc.nextInt();
         int[] v = new int[n];
         for (int i = 0; i < n; i++) {
-            v[i] = rand.nextInt(1000000);
+//            v[i] = rand.nextInt(1000000);
+            /*
+            이런 경우처럼 데이터의 어느정도 정렬의 방향성을 주었을때 는 삽입 정렬이 훨씬 유리하다 !!(중요!!!)
+            보통 O(N)의 시간이 필요하게 만들어 지기 때문
+             */
+            v[i] = i + rand.nextInt(1000); // 전체적으로 어느 정도 증가하는 형태
         }
         long ts = System.currentTimeMillis();
         // sorting...
-//        selection_sort(v, n);
-        insertion_sort(v,n);
+        selection_sort(v, n);
+//        insertion_sort(v, n);
         ts  = System.currentTimeMillis() -ts;
         for (int i = 0; i < 10; i++) {
             System.out.println(v[i]);
         }
-
         System.out.println("Elapsed time is " + ts + "ms.");
-
-
     }
 }
