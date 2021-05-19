@@ -2,8 +2,10 @@ package MyLab15;
 
 import java.util.Random;
 import java.util.Scanner;
-
-public class Main {
+// 2**127 => 128 * 10**36과 비슷하다
+// 2*10 을 1000이라고 생각하기
+public class Main2 {
+    // O(n**2)
     static void selectionSort(int[] v, int from, int to) {
         for (int i = from; i < to; i++) {
             int min = i;
@@ -20,11 +22,23 @@ public class Main {
     static void selectionSort(int[]v , int n) {
         selectionSort(v,0,n-1);
     }
+
+    // 재귀적인 관점에서의 mergesort
+    // 재귀적 관점은 초기 조건이 있어야함!
+    static int[] t;
+    // O(nlogn)
+    // T(N) = 2T(N/2) +N
+    // T(N) 을 nlogn이라고 했을때 식넣어보면 성립함
     static void mergeSort(int[] v,int from, int to) {
+        // 재귀적 관점의 초기 조건(탈출조건)
+        if (from == to) {
+            return;
+        }
         int c = (from + to) / 2;
-        selectionSort(v, from, c);
-        selectionSort(v, c + 1, to);
-        int[] t = new int[to + 1];
+        mergeSort(v, from, c);
+        mergeSort(v, c + 1, to);
+        // 이게 여기있으면 배열을 계속 만들기때문에 시간적 효율에 좋지 않다
+//        int[] t = new int[to + 1];
         int i = from, j = c+1, k=from;
         while (i <= c && j <= to) {
             if (v[i] <= v[j]) {
@@ -46,6 +60,7 @@ public class Main {
         }
     }
     static void mergeSort(int[] v, int n) {
+        t = new int[n];
         mergeSort(v, 0, n - 1);
     }
     public static void main(String[] args) {
