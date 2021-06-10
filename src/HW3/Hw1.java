@@ -85,13 +85,14 @@ public class Hw1 {
         HashTable ht = new HashTable(5050);
         for (int i = 0; i < str.length(); i++) {
             for (int j = i; j < str.length(); j++) {
+                System.out.println(str.substring(i, j + 1));
                 arr[cnt] = str.substring(i, j + 1);
                 cnt += 1;
             }
 
         }
-//        System.out.println(arr.length+" "+len);
-//        System.out.println(Arrays.toString(arr));
+        System.out.println(arr.length+" "+len);
+        System.out.println(Arrays.toString(arr));
         for (int i = 0; i < arr.length; i++) {
             ht.put(arr[i], 1);
         }

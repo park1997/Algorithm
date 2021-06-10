@@ -13,8 +13,8 @@ class Queue{
         head = tail = 0;
     }
     void add(int e){
-        data[tail] = e; // 꼬리위치에 e 저장
-        tail = (tail + 1) % N; // 꼬리위치 +1, N으로 나눈나머지로 가면 원형구조로 감
+        data[tail] = e;
+        tail = (tail + 1) % N;
     }
     // head만 한칸 오른쪽으로 옮기면 된다.
     void remove(){
