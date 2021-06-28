@@ -25,6 +25,13 @@ public class ex03 {
             System.out.println();
         }
         System.out.println(count+"개");
+
+
+        for (int i = 0; i < 10; i++) {
+            System.out.println();
+        }
+        
+
     }
 
 }
