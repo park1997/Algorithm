@@ -19,8 +19,8 @@ public class Lec0913_선택정렬 {
     private static void selectionSort(int[] A) {
         int i, j, min, temp;
         int n = A.length;
+        // A[i]부터 A[n-1]의 원소들 중 최소값의 인덱스를 찾는다
         for (i = 0; i < n - 1; i++) {
-            // A[i]부터 A[n-1]의 원소들 중 최소값의 인덱스를 찾는다
             min = i;
             for (j = i + 1; j < n; j++) {
                 if (A[j] < A[min]) {
