@@ -1,5 +1,6 @@
 package Algorithm;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
@@ -45,5 +46,10 @@ public class Main {
         }
         bfs(0, 0); // 정사각형에 최외각을 하나 더 만들어줬으로 (0,0)은 절대 건초더미 내부의 점이 아니므로 (0,0)부터 탐색함
         System.out.println(result);
+        for (int i = 0; i < length; i++) {
+            System.out.println(Arrays.toString(graph[i]));
+        }
+
+
     }
 }
